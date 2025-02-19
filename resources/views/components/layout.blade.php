@@ -20,6 +20,11 @@
         @endif
     </head>
     <body class="main-content">
+        @session('message')
+            <div class="bg-white p-6">
+                {{session('message')}}
+            </div>
+        @endsession
         {{$slot}}
     </body>
 </html>

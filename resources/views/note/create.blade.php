@@ -1,10 +1,11 @@
 <x-layout>
     <h1>create me</h1>
     <div>
-        <form action="" method="POST">
+        <form action="{{route('note.store')}}" method="POST">
+            @csrf
             <textarea name="note"></textarea>
             <div>
-                <a href="">Cancel</a>
+                <a href="{{route('note.index')}}">Cancel</a>
                 <button>Submit</button>
             </div>
         </form>
